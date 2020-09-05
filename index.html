@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temanku</title>
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/all.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/plugin/flickity.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/col.css">
+
+</head>
+<body>
+
+
+	<div class="img-banner"></div> <!-- /img-avatar -->
+
+	<header>
+
+		<div class="bg-menu">
+			
+			<div class="menu-wrap">
+				
+				<ul class="logo">
+					<a href="">Temanku</a>
+				</ul>
+
+				<ul class="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Teman</a></li>
+					<li><a href="#">Tentang</a></li>
+					<li><a href="#">Kontak</a></li>
+				</ul>
+
+				<ul class="profile">
+					
+					<div class="img" id="imgProfile">
+						<img src="images/mankz2.jpg">
+					</div>
+
+					<h3>Komang Krisnanda</h3>
+
+				</ul>
+
+			</div> <!-- /menu-wrap -->
+
+		</div> <!-- /bg-menu -->
+
+		<div class="acc-setting">
+			<ul>
+				<li>
+					<a href="">
+						<i class="fa fa-user"></i> <span style="left: 8px">Akun Saya</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="">
+						<i class="fa fa-edit"></i> <span style="left: 4px">Ubah Akun</span>
+					</a>
+				</li>
+				
+				<li style="border-bottom: transparent;">
+					<a href="">
+						<i class="fa fa-sign-out-alt"></i> <span style="left: 6px">Logout</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- <div class="black-screen"></div> -->
+
+
+		<div class="banner">
+			<h3>Selamat datang di Temanku</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<div class="img-avatar avatar-1">
+				<img src="images/ade1.jpg">
+			</div> 
+
+			<div class="img-avatar avatar-2">
+				<img src="images/inge1.jpg">
+			</div> 
+
+			<div class="img-avatar avatar-3">
+				<img src="images/rani6.jpg">
+			</div> 
+
+			<div class="img-avatar avatar-4">
+				<img src="images/dinda2.jpg">
+			</div> 
+		</div>
+	</header>
+
+
+	<section class="bg-excellence">
+		<h2 style="text-align: center;">Keunggulan Kami</h2>
+
+		<div class="col-lg-3">
+			<div class="box-exc">
+				
+				<div class="img" align="center">
+					<img src="images/vectors/1.svg">
+				</div>
+
+				<h3>Mendapatkan teman online</h3>
+
+			</div> <!-- /box-exc -->
+		</div> <!-- /col-lg-3 -->
+
+		<div class="col-lg-3">
+			<div class="box-exc">
+				
+				<div class="img" align="center">
+					<img src="images/vectors/2.svg">
+				</div>
+
+				<h3>Hangout lebih mudah</h3>
+
+			</div> <!-- /box-exc -->
+		</div> <!-- /col-lg-3 -->
+
+		<div class="col-lg-3">
+			<div class="box-exc">
+				
+				<div class="img" align="center">
+					<img src="images/vectors/3.svg">
+				</div>
+
+				<h3>Komunikasi lebih mudah</h3>
+
+			</div> <!-- /box-exc -->
+		</div> <!-- /col-lg-3 -->
+
+		<div class="col-lg-3">
+			<div class="box-exc">
+				
+				<div class="img" align="center">
+					<img src="images/vectors/4.svg">
+				</div>
+
+				<h3>Bisa juga mendapat jodoh</h3>
+
+			</div> <!-- /box-exc -->
+		</div> <!-- /col-lg-3 -->
+
+
+
+	</section> <!-- /bg-excellence -->
+
+	
+	<section class="bg-friends">
+		
+		
+
+	</section> <!-- /bg-friends -->
+
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/plugin/click-scroll.js"></script>
+	<script src="js/plugin/flickity.pkgd.min.js"></script>
+	<script src="js/plugin/scrolla.jquery.min.js"></script>
+	
+
+	<script type="text/javascript">
+		$('.animate').scrolla({
+		  mobile: false,
+		  once: true
+		});
+	  
+		</script>
+
+
+
+		<script>
+			$('.main-carousel').flickity({
+			  // options
+			  cellAlign: 'left',
+			  contain: true,
+			  prevNextButtons: false,
+			  wrapAround: true,
+			  pageDots: true
+			  // autoPlay: 5000
+			});
+
+			$('.btn-carousel').flickity({
+			  // options
+			  cellAlign: 'left',
+			  contain: true,
+			  prevNextButtons: false,
+			  wrapAround: false,
+			  pageDots: false
+			  // autoPlay: 5000
+			});
+		</script>
+
+
+		<script>
+			$(window).scroll(function(){
+				var scroll = $(window).scrollTop();
+
+				if(scroll > 450){
+					$('.menu-wrap ul.logo a').addClass('scroll');
+					$('.menu-wrap ul.profile h3').addClass('scroll');
+					$('.bg-menu').addClass('scroll');
+					$('.menu-wrap ul.profile div.img').addClass('scroll');
+					$('.menu-wrap ul.menu a').addClass('scroll');
+				}
+
+				else{
+					$('.menu-wrap ul.logo a').removeClass('scroll');
+					$('.menu-wrap ul.profile h3').removeClass('scroll');
+					$('.bg-menu').removeClass('scroll');
+					$('.menu-wrap ul.profile div.img').removeClass('scroll');
+					$('.menu-wrap ul.menu a').removeClass('scroll');
+				}
+			})
+
+			$('#imgProfile').click(function(){
+				$('.acc-setting').toggleClass('click')
+			})
+		</script>
+
+	
+</body>
+</html>
